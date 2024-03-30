@@ -11,21 +11,24 @@
     <div class="md:flex md:flex-col justify-center items-center">
       <div class="rules m-1 p-1 md:relative md:left-[30%]">
         <button
-          class="design btn btn-check m-2 p-2 bg-blue-600 shadow-xl rounded-lg text-white font-semibold text-lg tracking-wide active:bg-[#101e83] active:shadow-xl active:translate-y-1 active:text-cyan-400 active:shadow-violet-500">
+          class="design open-modal m-2 p-2 bg-blue-600 shadow-xl rounded-lg text-white font-semibold text-lg tracking-wide active:bg-[#101e83] active:shadow-xl active:translate-y-1 active:text-cyan-400 active:shadow-violet-500">
           RULES🧾
         </button>
       </div>
 
       <!-- Modal button  -->
       <div class="modal hidden rounded-xl absolute z-10 p-4 m-2 md:w-[470px]">
+        <!-- close-modal button  -->
         <button
           class="close-modal text-5xl text-red-600 relative md:absolute -right-72 top-14 font-extrabold w-10 h-10 text-center md:right-12 md:top-6">
           &times;
         </button>
+
         <h2
           class="design px-2 py-2 m-3 text-center text-2xl font-extrabold text-slate-700 bg-white rounded-xl tracking-wider">
           🧾RULES🧾
         </h2>
+
         <p class="design bg-white rounded-xl p-4 m-1 text-sm font-semibold">
           1. Guess the Number Between 1 - 20. <br />
           2. Then check the number. <br />
@@ -47,8 +50,8 @@
         class="box flex justify-center flex-col rounded-lg m-3 shadow-2xl shadow-indigo-500/50 md:w-[410px]">
         <div class="flex justify-center items-center flex-col">
           <span
-            class="guess design rounded-[50%] shadow-xl bg-slate-200 text-center text-slate-800 text-3xl font-semibold w-16 h-16 flex justify-center items-center relative bottom-8 border-red-600 border-2"
-            >20</span
+            class="number design rounded-[50%] shadow-xl bg-slate-200 text-center text-slate-800 text-3xl font-semibold w-16 h-16 flex justify-center items-center relative bottom-8 border-red-600 border-2"
+            >?</span
           >
 
           <div class="flex justify-center flex-col items p-1 mb-4">
@@ -56,24 +59,24 @@
               class="m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2 design"
               >💯 Your Score:
               <span
-                class="design score text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
-                >100</span
+                class="score design text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
+                >0</span
               ></span
             >
             <span
               class="m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2 design"
               >⚠️ Attempts left:
               <span
-                class="design attempts text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
-                >10</span
+                class="design attempt text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
+                >20</span
               ></span
             >
             <span
               class="m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2 design"
               >🥇 High Score:
               <span
-                class="design highScore text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
-                >200</span
+                class="highScore design text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
+                >0</span
               ></span
             >
           </div>
@@ -87,33 +90,33 @@
         <!-- message section  -->
         <div class="heading flex justify-center items-center">
           <h3
-            class="design message text-center text-xl p-2 m-2 bg-white rounded-xl shadow-lg text-emerald-700 font-semibold w-[16rem]">
-            Guessing🤔...
+            class="message design text-center text-xl p-2 m-2 bg-white rounded-xl shadow-lg text-slate-700 font-semibold w-[16rem]">
+            Start Guessing🤔...
           </h3>
         </div>
 
         <!-- instruction section  -->
         <div class="flex justify-center items-center flex-col">
           <span
-            class="design text-center p-2 m-2 bg-white rounded-xl shadow-lg text-emerald-700 font-semibold w-[12rem]"
-            >Between (1 - 20)</span
+            class="design text-center p-2 m-2 bg-white rounded-xl shadow-lg text-slate-700 font-semibold w-[12rem]"
+            >Between [ 1 - 20 ]</span
           >
 
           <!-- input section  -->
           <input
             type="number"
             placeholder="Text the number here!"
-            class="design m-2 p-2 rounded-xl remove-arrow" />
+            class="guess design m-2 p-2 rounded-xl remove-arrow" />
 
           <!-- buttons section  -->
           <div class="flex justify-between items-center">
             <button
-              class="design btn btn-check mx-14 p-1 bg-blue-600 shadow-xl rounded-[50%] h-14 w-14 text-white font-semibold text-xl tracking-wide active:bg-blue-400 active:shadow-xl active:transition-shadow active:translate-y-1 active:text-slate-400">
+              class="design btn again mx-14 p-1 bg-blue-600 shadow-xl rounded-[50%] h-14 w-14 text-white font-semibold text-xl tracking-wide active:bg-[#101e83] active:shadow-xl active:translate-y-1 active:text-cyan-400 active:shadow-violet-500">
               &#x21bb;
             </button>
 
             <button
-              class="design btn btn-check mx-14 p-2 bg-blue-600 shadow-xl rounded-lg text-white font-semibold text-lg tracking-wide active:bg-blue-400 active:shadow-xl active:transition-shadow active:translate-y-1 active:text-slate-800">
+              class="design btn check mx-14 p-2 bg-blue-600 shadow-xl rounded-lg text-white font-semibold text-lg tracking-wide active:bg-[#101e83] active:shadow-xl active:translate-y-1 active:text-cyan-400 active:shadow-violet-500">
               ✅Check!
             </button>
           </div>
