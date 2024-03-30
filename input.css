@@ -34,3 +34,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
 }
+
+.confetti {
+  position: absolute;
+  z-index: 30;
+}

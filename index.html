@@ -15,7 +15,6 @@
           RULES🧾
         </button>
       </div>
-
       <!-- Modal button  -->
       <div class="modal hidden rounded-xl absolute z-10 p-4 m-2 md:w-[470px]">
         <!-- close-modal button  -->
@@ -44,7 +43,7 @@
       <!-- OverLay  -->
       <div
         class="overlay hidden fixed top-0 left-0 h-[100%] w-[100%] backdrop-blur-sm"></div>
-
+      <canvas id="confetti" class="confetti"></canvas>
       <!-- First box -->
       <div
         class="box flex justify-center flex-col rounded-lg m-3 shadow-2xl shadow-indigo-500/50 md:w-[410px]">
@@ -56,26 +55,26 @@
 
           <div class="flex justify-center flex-col items p-1 mb-4">
             <span
-              class="m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2 design"
+              class="design m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2"
               >💯 Your Score:
               <span
-                class="score design text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
+                class="score design text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6 relative left-8"
                 >0</span
               ></span
             >
             <span
-              class="m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2 design"
+              class="design m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2"
               >⚠️ Attempts left:
               <span
-                class="design attempt text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
+                class="design attempt text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6 relative left-2"
                 >20</span
               ></span
             >
             <span
-              class="m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2 design"
+              class="design m-1 text-left text-xl font-semibold item bg-white text-slate-800 rounded-lg p-2"
               >🥇 High Score:
               <span
-                class="highScore design text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6"
+                class="highScore design text-white font-semibold bg-blue-600 py-1 px-4 m-3 rounded-lg w-6 relative left-8"
                 >0</span
               ></span
             >
@@ -123,7 +122,7 @@
         </div>
       </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

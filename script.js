@@ -43,14 +43,14 @@ const againBtn = document.querySelector(".again");
 const checkAndAgainBtn = document.querySelectorAll(".btn");
 
 // SCORES
-// const score = document.querySelector(".score");
-// const highScore = document.querySelector(".highScore");
-
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let attempt = 20;
 let highScore = 0;
-console.log(secretNumber);
+// CONFETTI
+const canvas = document.querySelector("#confetti");
+const jsConfetti = new JSConfetti();
 // END
+
 // CHECK EVENT
 checkBtn.addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
@@ -60,6 +60,7 @@ checkBtn.addEventListener("click", function () {
     message.textContent = "🎊Correct Number!🎊";
     InputNumber.textContent = secretNumber;
     body.style.backgroundColor = "#16ce7b";
+    jsConfetti.addConfetti();
 
     checkAndAgainBtn.forEach((element) => {
       element.style.backgroundColor = "#16ce7b";
@@ -91,6 +92,7 @@ againBtn.addEventListener("click", function () {
   document.querySelector(".attempt").textContent = attempt;
   document.querySelector(".guess").value = "";
   body.style.backgroundColor = "#101220";
+  InputNumber.textContent = "?";
 
   checkAndAgainBtn.forEach((element) => {
     element.style.backgroundColor = "#2962ff";
