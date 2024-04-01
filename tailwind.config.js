@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         customFont: ['Lilita One'],
       },
+      cursor: {
+        PointerCursor: 'url(./img/pointer.png), pointer',
+      },
     },
   },
   plugins: [],

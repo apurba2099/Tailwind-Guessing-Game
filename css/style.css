@@ -653,6 +653,14 @@ video {
   width: 16rem;
 }
 
+.cursor-PointerCursor{
+  cursor: url(./img/pointer.png), pointer;
+}
+
+.cursor-auto{
+  cursor: auto;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -854,7 +862,7 @@ video {
 }
 
 /* body {
-  cursor: url(./img/pointer.png), auto;
+  cursor: url('./img/pointer.png') auto;
 } */
 
 .remove-arrow::-webkit-inner-spin-button,
