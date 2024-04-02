@@ -47,6 +47,7 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let attempt = 20;
 let highScore = 0;
 let score = document.querySelector('.score');
+console.log(secretNumber);
 // CONFETTI
 const canvas = document.querySelector('#confetti');
 const jsConfetti = new JSConfetti();
@@ -71,7 +72,7 @@ checkBtn.addEventListener('click', function () {
     score.style.backgroundColor = '#16ce7b';
     document.querySelector('.attempt').style.backgroundColor = '#16ce7b';
 
-    score.textContent = secretNumber + guess;
+    score.textContent = highScore + guess;
     jsConfetti.addConfetti();
 
     checkAndAgainBtn.forEach(element => {
