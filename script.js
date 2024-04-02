@@ -47,7 +47,6 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let attempt = 20;
 let highScore = 0;
 let score = document.querySelector('.score');
-console.log(secretNumber);
 // CONFETTI
 const canvas = document.querySelector('#confetti');
 const jsConfetti = new JSConfetti();
