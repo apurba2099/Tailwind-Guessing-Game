@@ -1,30 +1,30 @@
-"use strict";
+'use strict';
 
 // START MODAL CODE
 
 // Define the all class name into the variable
-const openModalBtn = document.querySelector(".open-modal");
-const closeModalBtn = document.querySelector(".close-modal");
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
+const openModalBtn = document.querySelector('.open-modal');
+const closeModalBtn = document.querySelector('.close-modal');
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
 
 // create a function to open modal
 const openModal = () => {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
 };
 
 // create a function to close modal
 const closeModal = () => {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
 };
 
 // add click event to these button
-openModalBtn.addEventListener("click", () => {
+openModalBtn.addEventListener('click', () => {
   openModal();
 });
-closeModalBtn.addEventListener("click", () => {
+closeModalBtn.addEventListener('click', () => {
   closeModal();
 });
 // END MODAL CODE
@@ -33,68 +33,72 @@ closeModalBtn.addEventListener("click", () => {
 // START GAME CODE
 // Initialize values
 // MESSAGE AND NUMBER
-const body = document.querySelector("body");
-const message = document.querySelector(".message");
-const InputNumber = document.querySelector(".number");
+const body = document.querySelector('body');
+const message = document.querySelector('.message');
+const InputNumber = document.querySelector('.number');
+let score = document.querySelector('.score');
 
 // BUTTONS
-const checkBtn = document.querySelector(".check");
-const againBtn = document.querySelector(".again");
-const checkAndAgainBtn = document.querySelectorAll(".btn");
+const checkBtn = document.querySelector('.check');
+const againBtn = document.querySelector('.again');
+const checkAndAgainBtn = document.querySelectorAll('.btn');
 
 // SCORES
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let attempt = 20;
 let highScore = 0;
 // CONFETTI
-const canvas = document.querySelector("#confetti");
+const canvas = document.querySelector('#confetti');
 const jsConfetti = new JSConfetti();
 // END
 
 // CHECK EVENT
-checkBtn.addEventListener("click", function () {
-  const guess = Number(document.querySelector(".guess").value);
+checkBtn.addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess').value);
   if (!guess) {
-    message.textContent = "Please enter a number🙏!";
-  } else if (guess === secretNumber) {
-    message.textContent = "🎊Correct Number!🎊";
+    message.textContent = 'Please enter a number🙏!';
+  }
+  // WINNING SECTION
+  else if (guess === secretNumber) {
+    message.textContent = '🎊Correct Number!🎊';
     InputNumber.textContent = secretNumber;
-    body.style.backgroundColor = "#16ce7b";
+    body.style.backgroundColor = '#16ce7b';
+    score.textContent = secretNumber + guess;
     jsConfetti.addConfetti();
 
-    checkAndAgainBtn.forEach((element) => {
-      element.style.backgroundColor = "#16ce7b";
+    checkAndAgainBtn.forEach(element => {
+      element.style.backgroundColor = '#16ce7b';
     });
 
     if (attempt > highScore) {
       highScore = attempt;
-      document.querySelector(".highScore").textContent = highScore;
+      document.querySelector('.highScore').textContent = highScore;
     }
   } else if (guess !== secretNumber) {
     if (attempt > 1) {
       message.textContent = `${
-        guess > secretNumber ? "📈 Too High!" : "📉 Too Low!"
+        guess > secretNumber ? '📈 Too High!' : '📉 Too Low!'
       }`;
       attempt--;
-      document.querySelector(".attempt").textContent = attempt;
+      document.querySelector('.attempt').textContent = attempt;
     } else {
-      message.textContent = "☠️You lost the game!☠️";
-      document.querySelector(".attempt").textContent = 0;
+      message.textContent = '☠️You lost the game!☠️';
+      document.querySelector('.attempt').textContent = 0;
     }
   }
 });
 
 // AGAIN EVENT
-againBtn.addEventListener("click", function () {
+againBtn.addEventListener('click', function () {
   attempt = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  message.textContent = "Start Guessing🤔...";
-  document.querySelector(".attempt").textContent = attempt;
-  document.querySelector(".guess").value = "";
-  body.style.backgroundColor = "#101220";
-  InputNumber.textContent = "?";
+  message.textContent = 'Start Guessing🤔...';
+  document.querySelector('.attempt').textContent = attempt;
+  document.querySelector('.guess').value = '';
+  body.style.backgroundColor = '#101220';
+  InputNumber.textContent = '?';
 
-  checkAndAgainBtn.forEach((element) => {
-    element.style.backgroundColor = "#2962ff";
+  checkAndAgainBtn.forEach(element => {
+    element.style.backgroundColor = '#2962ff';
   });
 });

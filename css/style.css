@@ -657,10 +657,6 @@ video {
   cursor: url(./img/pointer.png), pointer;
 }
 
-.cursor-auto{
-  cursor: auto;
-}
-
 .flex-col{
   flex-direction: column;
 }
@@ -832,6 +828,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-blue-500{
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -953,6 +954,46 @@ video {
     top: 1.5rem;
   }
 
+  .md\:left-\[\%\]{
+    left: %;
+  }
+
+  .md\:left-\[40\%\]{
+    left: 40%;
+  }
+
+  .md\:left-\[12\%\]{
+    left: 12%;
+  }
+
+  .md\:top-\[\]{
+    top: ;
+  }
+
+  .md\:top-\[5\%\]{
+    top: 5%;
+  }
+
+  .md\:bottom-\[5\%\]{
+    bottom: 5%;
+  }
+
+  .md\:left-\[10\%\]{
+    left: 10%;
+  }
+
+  .md\:left-\[15\%\]{
+    left: 15%;
+  }
+
+  .md\:left-\[14\%\]{
+    left: 14%;
+  }
+
+  .md\:left-\[13\%\]{
+    left: 13%;
+  }
+
   .md\:flex{
     display: flex;
   }
@@ -967,5 +1008,25 @@ video {
 
   .md\:flex-col{
     flex-direction: column;
+  }
+
+  .md\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .md\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
