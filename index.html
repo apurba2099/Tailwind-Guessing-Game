@@ -3,10 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Unleash your inner detective and solve mysteries through strategic guessing in our interactive game." />
+    <meta name="author" content="Apurba Dutta" />
+    <meta
+      name="keywords"
+      content="Using html,css and js frontend web development" />
+    <meta property="og:title" content="Guessing Bro🤔🔢!" />
+    <meta property="og:image" content="https://i.ibb.co/PQVk7Pw/metaOg.jpg" />
+    <meta
+      property="og:description"
+      content="Unleash your inner detective and solve mysteries through strategic guessing in our interactive game by Apurba Dutta." />
+
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Guessing Tailwind</title>
+    <title>GuessingBro!</title>
   </head>
-  <body class="bg-[#101220] font-customFont tracking-wide cursor-PointerCursor">
+  <body class="bg-[#101220] font-customFont tracking-wide">
     <!-- Rules button  -->
     <div class="md:flex md:flex-col justify-center items-center">
       <div class="rules m-1 p-1 md:relative md:left-[13%]">
@@ -19,16 +34,16 @@
       <div class="modal hidden rounded-xl absolute z-10 p-4 m-2 md:w-[470px]">
         <!-- close-modal button  -->
         <button
-          class="close-modal text-5xl text-red-600 relative md:absolute -right-72 top-14 font-extrabold w-10 h-10 text-center md:right-12 md:top-6">
+          class="close-modal text-5xl text-red-600 relative top-[55px] md:absolute -right-72 font-extrabold w-10 h-10 text-center md:right-12 md:top-6">
           &times;
         </button>
 
         <h2
-          class="design px-2 py-2 m-3 text-center text-2xl font-extrabold text-slate-700 bg-white rounded-xl tracking-wider">
+          class="design px-2 py-2 m-2 text-center text-2xl font-extrabold text-slate-700 bg-white rounded-xl tracking-wider">
           🧾RULES🧾
         </h2>
 
-        <p class="design bg-white rounded-xl p-4 m-1 text-lg font-semibold">
+        <p class="design bg-white rounded-xl p-4 m-2 text-lg font-semibold">
           1. Guess the Number Between 1 - 20. <br />
           2. Then check the number. <br />
           3. If the hidden number is bigger than your Guessing number then it
@@ -105,7 +120,7 @@
           <!-- input section  -->
           <input
             type="number"
-            placeholder="Text the number here!"
+            placeholder="Enter the number here!"
             class="guess design m-2 p-2 rounded-xl remove-arrow" />
 
           <!-- buttons section  -->

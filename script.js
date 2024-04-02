@@ -36,7 +36,6 @@ closeModalBtn.addEventListener('click', () => {
 const body = document.querySelector('body');
 const message = document.querySelector('.message');
 const InputNumber = document.querySelector('.number');
-let score = document.querySelector('.score');
 
 // BUTTONS
 const checkBtn = document.querySelector('.check');
@@ -47,6 +46,7 @@ const checkAndAgainBtn = document.querySelectorAll('.btn');
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let attempt = 20;
 let highScore = 0;
+let score = document.querySelector('.score');
 // CONFETTI
 const canvas = document.querySelector('#confetti');
 const jsConfetti = new JSConfetti();
@@ -61,8 +61,16 @@ checkBtn.addEventListener('click', function () {
   // WINNING SECTION
   else if (guess === secretNumber) {
     message.textContent = '🎊Correct Number!🎊';
+    message.style.backgroundColor = '#16ce7b';
+    message.style.color = '#ffffff';
     InputNumber.textContent = secretNumber;
     body.style.backgroundColor = '#16ce7b';
+    openModalBtn.style.backgroundColor = '#16ce7b';
+
+    document.querySelector('.highScore').style.backgroundColor = '#16ce7b';
+    score.style.backgroundColor = '#16ce7b';
+    document.querySelector('.attempt').style.backgroundColor = '#16ce7b';
+
     score.textContent = secretNumber + guess;
     jsConfetti.addConfetti();
 
@@ -83,6 +91,7 @@ checkBtn.addEventListener('click', function () {
       document.querySelector('.attempt').textContent = attempt;
     } else {
       message.textContent = '☠️You lost the game!☠️';
+      body.style.backgroundColor = '#F32013';
       document.querySelector('.attempt').textContent = 0;
     }
   }
@@ -92,11 +101,20 @@ checkBtn.addEventListener('click', function () {
 againBtn.addEventListener('click', function () {
   attempt = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  message.textContent = 'Start Guessing🤔...';
-  document.querySelector('.attempt').textContent = attempt;
-  document.querySelector('.guess').value = '';
-  body.style.backgroundColor = '#101220';
   InputNumber.textContent = '?';
+  document.querySelector('.guess').value = '';
+
+  message.textContent = 'Start Guessing🤔. . .';
+  message.style.backgroundColor = 'white';
+  message.style.color = '#334155';
+  openModalBtn.style.backgroundColor = '#2962ff';
+
+  body.style.backgroundColor = '#101220';
+  document.querySelector('.attempt').textContent = attempt;
+
+  document.querySelector('.highScore').style.backgroundColor = '#2962ff';
+  score.style.backgroundColor = '#2962ff';
+  document.querySelector('.attempt').style.backgroundColor = '#2962ff';
 
   checkAndAgainBtn.forEach(element => {
     element.style.backgroundColor = '#2962ff';
