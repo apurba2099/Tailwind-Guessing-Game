@@ -9,6 +9,7 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 
 // create a function to open modal
+
 const openModal = () => {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
